@@ -23,8 +23,8 @@ function ajaxReqForGitHub(url,call) {
         data: "",
         contentType: "application/json",  //推荐写这个
         dataType: "json",
-        error: function () {
-            console.log('req error');
+        error: function (error) {
+            console.log('req error', error);
         },
         success: function (data) {
             call(data);
